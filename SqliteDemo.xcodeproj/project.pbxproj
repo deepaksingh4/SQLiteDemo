@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D99CBEC229B5E01000FD6E99 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CBEC129B5E01000FD6E99 /* TableModel.swift */; };
+		D99CBEC429B5E08800FD6E99 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CBEC329B5E08800FD6E99 /* ContactModel.swift */; };
+		D99CBEC629B609DE00FD6E99 /* MainTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CBEC529B609DE00FD6E99 /* MainTableViewModel.swift */; };
 		D9FA8AA529B1DB350066C90D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA8AA429B1DB350066C90D /* AppDelegate.swift */; };
 		D9FA8AA729B1DB350066C90D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA8AA629B1DB350066C90D /* SceneDelegate.swift */; };
-		D9FA8AA929B1DB350066C90D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA8AA829B1DB350066C90D /* ViewController.swift */; };
 		D9FA8AAC29B1DB350066C90D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9FA8AAA29B1DB350066C90D /* Main.storyboard */; };
 		D9FA8AAE29B1DB370066C90D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9FA8AAD29B1DB370066C90D /* Assets.xcassets */; };
 		D9FA8AB129B1DB370066C90D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9FA8AAF29B1DB370066C90D /* LaunchScreen.storyboard */; };
 		D9FA8ABC29B1DB370066C90D /* SqliteDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA8ABB29B1DB370066C90D /* SqliteDemoTests.swift */; };
 		D9FA8AC629B1DB370066C90D /* SqliteDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA8AC529B1DB370066C90D /* SqliteDemoUITests.swift */; };
 		D9FA8AC829B1DB370066C90D /* SqliteDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA8AC729B1DB370066C90D /* SqliteDemoUITestsLaunchTests.swift */; };
+		D9FA8AD529B1DC200066C90D /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA8AD429B1DC200066C90D /* MainTableViewController.swift */; };
+		D9FA8AD729B1ECE70066C90D /* SqliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA8AD629B1ECE70066C90D /* SqliteManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D99CBEC129B5E01000FD6E99 /* TableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
+		D99CBEC329B5E08800FD6E99 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		D99CBEC529B609DE00FD6E99 /* MainTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewModel.swift; sourceTree = "<group>"; };
 		D9FA8AA129B1DB350066C90D /* SqliteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SqliteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9FA8AA429B1DB350066C90D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9FA8AA629B1DB350066C90D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D9FA8AA829B1DB350066C90D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D9FA8AAB29B1DB350066C90D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9FA8AAD29B1DB370066C90D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9FA8AB029B1DB370066C90D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,8 @@
 		D9FA8AC129B1DB370066C90D /* SqliteDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SqliteDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9FA8AC529B1DB370066C90D /* SqliteDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteDemoUITests.swift; sourceTree = "<group>"; };
 		D9FA8AC729B1DB370066C90D /* SqliteDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D9FA8AD429B1DC200066C90D /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		D9FA8AD629B1ECE70066C90D /* SqliteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +84,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D99CBEC729B616E500FD6E99 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				D9FA8AD429B1DC200066C90D /* MainTableViewController.swift */,
+				D99CBEC529B609DE00FD6E99 /* MainTableViewModel.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		D9FA8A9829B1DB350066C90D = {
 			isa = PBXGroup;
 			children = (
+				D99CBEC329B5E08800FD6E99 /* ContactModel.swift */,
+				D99CBEC129B5E01000FD6E99 /* TableModel.swift */,
+				D9FA8AD629B1ECE70066C90D /* SqliteManager.swift */,
 				D9FA8AA329B1DB350066C90D /* SqliteDemo */,
 				D9FA8ABA29B1DB370066C90D /* SqliteDemoTests */,
 				D9FA8AC429B1DB370066C90D /* SqliteDemoUITests */,
@@ -101,8 +121,8 @@
 			children = (
 				D9FA8AA429B1DB350066C90D /* AppDelegate.swift */,
 				D9FA8AA629B1DB350066C90D /* SceneDelegate.swift */,
-				D9FA8AA829B1DB350066C90D /* ViewController.swift */,
 				D9FA8AAA29B1DB350066C90D /* Main.storyboard */,
+				D99CBEC729B616E500FD6E99 /* MainView */,
 				D9FA8AAD29B1DB370066C90D /* Assets.xcassets */,
 				D9FA8AAF29B1DB370066C90D /* LaunchScreen.storyboard */,
 				D9FA8AB229B1DB370066C90D /* Info.plist */,
@@ -258,9 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9FA8AA929B1DB350066C90D /* ViewController.swift in Sources */,
 				D9FA8AA529B1DB350066C90D /* AppDelegate.swift in Sources */,
+				D9FA8AD529B1DC200066C90D /* MainTableViewController.swift in Sources */,
+				D99CBEC429B5E08800FD6E99 /* ContactModel.swift in Sources */,
 				D9FA8AA729B1DB350066C90D /* SceneDelegate.swift in Sources */,
+				D99CBEC629B609DE00FD6E99 /* MainTableViewModel.swift in Sources */,
+				D9FA8AD729B1ECE70066C90D /* SqliteManager.swift in Sources */,
+				D99CBEC229B5E01000FD6E99 /* TableModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
