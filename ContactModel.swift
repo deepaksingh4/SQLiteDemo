@@ -7,13 +7,30 @@
 
 import Foundation
 
-struct ContactModel: TableModel{
+struct ContactModel: TableModel, Contact {
+    static var getReadQuery: String {
+        get {
+            return "SELECT * FROM \(tableName)"
+        }
+    }
     
-    var tableName: String {
+    var name: String
+    
+    var address: String
+    
+    var phone: String
+    
+    var id: Int
+    
+    
+    
+   static var tableName: String {
         get{
             return "Contacts"
         }
     }
+    
+    static  var createTableQuery = "CREATE TABLE IF NOT EXISTS CONTACTS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, ADDRESS TEXT, PHONE TEXT)"
     
     func getInsertQuery() -> String {
         return ""
@@ -26,5 +43,7 @@ struct ContactModel: TableModel{
     func getCreateQuery() -> String {
         return ""
     }
+    
+    
     
 }

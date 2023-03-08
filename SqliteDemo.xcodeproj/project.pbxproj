@@ -10,6 +10,10 @@
 		D99CBEC229B5E01000FD6E99 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CBEC129B5E01000FD6E99 /* TableModel.swift */; };
 		D99CBEC429B5E08800FD6E99 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CBEC329B5E08800FD6E99 /* ContactModel.swift */; };
 		D99CBEC629B609DE00FD6E99 /* MainTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CBEC529B609DE00FD6E99 /* MainTableViewModel.swift */; };
+		D99CBEC929B732B700FD6E99 /* ContactsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CBEC829B732B700FD6E99 /* ContactsUseCase.swift */; };
+		D99CBECB29B8856600FD6E99 /* ContactUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CBECA29B8856600FD6E99 /* ContactUIModel.swift */; };
+		D99CBECD29B885EC00FD6E99 /* ContactAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CBECC29B885EC00FD6E99 /* ContactAdaptor.swift */; };
+		D99CBECF29B89BFA00FD6E99 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99CBECE29B89BFA00FD6E99 /* Contact.swift */; };
 		D9FA8AA529B1DB350066C90D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA8AA429B1DB350066C90D /* AppDelegate.swift */; };
 		D9FA8AA729B1DB350066C90D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FA8AA629B1DB350066C90D /* SceneDelegate.swift */; };
 		D9FA8AAC29B1DB350066C90D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9FA8AAA29B1DB350066C90D /* Main.storyboard */; };
@@ -43,6 +47,10 @@
 		D99CBEC129B5E01000FD6E99 /* TableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
 		D99CBEC329B5E08800FD6E99 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		D99CBEC529B609DE00FD6E99 /* MainTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewModel.swift; sourceTree = "<group>"; };
+		D99CBEC829B732B700FD6E99 /* ContactsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsUseCase.swift; sourceTree = "<group>"; };
+		D99CBECA29B8856600FD6E99 /* ContactUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUIModel.swift; sourceTree = "<group>"; };
+		D99CBECC29B885EC00FD6E99 /* ContactAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAdaptor.swift; sourceTree = "<group>"; };
+		D99CBECE29B89BFA00FD6E99 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		D9FA8AA129B1DB350066C90D /* SqliteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SqliteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9FA8AA429B1DB350066C90D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9FA8AA629B1DB350066C90D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 			children = (
 				D9FA8AD429B1DC200066C90D /* MainTableViewController.swift */,
 				D99CBEC529B609DE00FD6E99 /* MainTableViewModel.swift */,
+				D99CBECA29B8856600FD6E99 /* ContactUIModel.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -96,6 +105,9 @@
 		D9FA8A9829B1DB350066C90D = {
 			isa = PBXGroup;
 			children = (
+				D99CBECE29B89BFA00FD6E99 /* Contact.swift */,
+				D99CBECC29B885EC00FD6E99 /* ContactAdaptor.swift */,
+				D99CBEC829B732B700FD6E99 /* ContactsUseCase.swift */,
 				D99CBEC329B5E08800FD6E99 /* ContactModel.swift */,
 				D99CBEC129B5E01000FD6E99 /* TableModel.swift */,
 				D9FA8AD629B1ECE70066C90D /* SqliteManager.swift */,
@@ -278,11 +290,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D99CBEC929B732B700FD6E99 /* ContactsUseCase.swift in Sources */,
 				D9FA8AA529B1DB350066C90D /* AppDelegate.swift in Sources */,
 				D9FA8AD529B1DC200066C90D /* MainTableViewController.swift in Sources */,
 				D99CBEC429B5E08800FD6E99 /* ContactModel.swift in Sources */,
 				D9FA8AA729B1DB350066C90D /* SceneDelegate.swift in Sources */,
 				D99CBEC629B609DE00FD6E99 /* MainTableViewModel.swift in Sources */,
+				D99CBECF29B89BFA00FD6E99 /* Contact.swift in Sources */,
+				D99CBECD29B885EC00FD6E99 /* ContactAdaptor.swift in Sources */,
+				D99CBECB29B8856600FD6E99 /* ContactUIModel.swift in Sources */,
 				D9FA8AD729B1ECE70066C90D /* SqliteManager.swift in Sources */,
 				D99CBEC229B5E01000FD6E99 /* TableModel.swift in Sources */,
 			);

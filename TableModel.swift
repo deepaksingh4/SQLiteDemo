@@ -8,8 +8,10 @@
 import Foundation
 
 protocol TableModel {
-    var tableName: String {get}
+    static var tableName: String {get}
+    static var createTableQuery: String {get}
     func getInsertQuery() -> String
     func getUpdateQuery() -> String
     func getCreateQuery() -> String
+    static var getReadQuery: String {get}
 }

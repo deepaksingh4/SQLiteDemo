@@ -11,11 +11,11 @@ import SQLite3
 
 class SqliteManager<T: TableModel> {
     
+    var model: T?
     var db:OpaquePointer?
-    var model: T
-    init(dbName: String, type: T){
-        self.model = type
+    init(dbName: String){
         db = openDatabase(dbName: dbName)
+        createTable()
     }
     
     func openDatabase(dbName: String = "contacts") -> OpaquePointer?
@@ -37,12 +37,24 @@ class SqliteManager<T: TableModel> {
     }
     
     func createTable(){
-            let createTable = "CREATE TABLE "
+        var createTableQuery: OpaquePointer?
+        if sqlite3_prepare_v2(db,T.createTableQuery, -1, &createTableQuery, nil) == SQLITE_OK{
+            
+            if sqlite3_step(createTableQuery) == SQLITE_DONE {
+                print("Table created")
+            }else{
+                print("Table not created")
+            }
+        }else{
+            print("Query not prepared")
+        }
     }
     
     
+    
+    
     func write() async {
-        let insertQuery = model.getInsertQuery()
+        let insertQuery = model?.getInsertQuery()
         var insertStatement : OpaquePointer? = nil
         if sqlite3_prepare_v2(db, insertQuery, -1, &insertStatement, nil) == SQLITE_OK{
             
@@ -50,6 +62,23 @@ class SqliteManager<T: TableModel> {
     }
     
     func read() async throws-> [T]{
+        
+        var readQuery: OpaquePointer?
+        
+        if sqlite3_prepare_v2(db,T.getReadQuery, -1, &readQuery, nil) == SQLITE_OK{
+            
+            if sqlite3_step(readQuery) == SQLITE_ROW {
+               
+                let id = sqlite3_column_int(readQuery, 0)
+                let name = sqlite3_column_text(readQuery, 1)
+                print("data retreived \(name)")
+            }else{
+                print("Table not created")
+            }
+        }else{
+            print("Query not prepared")
+        }
+        
         return []
     }
     

@@ -9,46 +9,39 @@ import Foundation
 
 protocol ContactBusinessLogic{
     func fetchContacts()
-    func addContact(contact: ContactModel)
-    func updateContact(contact: ContactModel)
+    func addContact(contact: ContactUIModel)
+    func updateContact(contact: ContactUIModel)
 }
 
 protocol ContactsController{
-    func updateContactList(contactList: [ContactModel])
+    func updateContactList(contactList: [ContactUIModel])
 }
 
 
 class MainTableViewModel {
     var controller : ContactsController
-    
+    var useCase: ContactsUseCase = ContactsUseCase()
     init(controller: ContactsController) {
         self.controller = controller
     }
     
-    var contacts : [ContactModel] = []
+    var contacts : [ContactUIModel] = []
 }
 
 extension MainTableViewModel: ContactBusinessLogic{
     
     func fetchContacts() {
-        let sqliteManager = SqliteManager(dbName: "s", type: ContactModel())
-        
-        Task.init {
-            do {
-                contacts = try await sqliteManager.read()
-                controller.updateContactList(contactList: contacts)
-            } catch {
-                debugPrint("Issue while fetching contacts")
-            }
-        }
+        //call to use case for getting contacts
+        let contacts = useCase.getContacts()
+        controller.updateContactList(contactList: contacts)
     }
     
-    func addContact(contact: ContactModel) {
-        
+    func addContact(contact: ContactUIModel) {
+        //call use case
     }
     
-    func updateContact(contact: ContactModel) {
-        
+    func updateContact(contact: ContactUIModel) {
+        //call use case
     }
     
     

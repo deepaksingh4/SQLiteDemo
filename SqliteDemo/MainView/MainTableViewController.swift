@@ -41,12 +41,11 @@ class MainTableViewController: UITableViewController {
 
 
 extension MainTableViewController : ContactsController{
-    func updateContactList(contactList: [ContactModel]) {
+    
+    func updateContactList(contactList: [ContactUIModel]) {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-        
     }
-    
     
 }
